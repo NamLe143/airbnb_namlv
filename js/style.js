@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  $('#bookHome').fullCalendar({
+  $('#select-date').fullCalendar({
+    themeSystem: 'bootstrap4',
     selectable: true,
+    customButtons: {
+    myCustomButton: {
+      text: 'custom!',
+      click: function() {
+          alert('clicked the custom button!');
+        },
+      }
+    },
     header: {
-      left: 'prev',
+      left: 'prev myCustomButton',
       center: 'title',
       right: 'next'
     },
+    
     dayClick: function(date) {
       alert('clicked ' + date.format());
     },

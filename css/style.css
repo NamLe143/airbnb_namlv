@@ -1,11 +1,70 @@
-html, body {
+@font-face {
+	font-family: din-regular;
+	src: url(../fonts/DIN-Regular.ttf);
+}
+@font-face {
+	font-family: din-bold;
+	src: url(../fonts/DIN-Bold.ttf)
+}
+* {
   margin: 0;
   padding: 0;
-  font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 14px;
+  font-family: "din-regular";
+  color: #484848;
 }
 
-#bookHome {
-  max-width: 900px;
-  margin: 40px auto;
+.fs-12{font-size: 12px;}
+.fs-14{font-size: 14px;}
+.fs-16{font-size: 16px;}
+.fs-18{font-size: 18px;}
+.fs-24{font-size: 24px;}
+.fs-32{font-size: 32px;}
+
+.font-weight-bold{font-family: "din-bold";}
+.text-grey{color: #767676;}
+.letter-spacing{letter-spacing: 1;}
+.p-11{padding: 11px}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+/*For IE*/
+select::-ms-expand { display: none; }
+input.where::-webkit-input-placeholder { color:#484848 !important; font-weight: 600; font-size: 16px;}
+input.where::-moz-placeholder { color:#484848 !important;  font-size: 16px;  } /* firefox 19+ */
+input.where:-ms-input-placeholder { color:#484848 !important;  font-size: 16px;  } /* ie */
+input.where:-moz-placeholder { color:#484848 !important;  font-size: 16px;  }
+
+::-webkit-input-placeholder { color:#767676 !important; font-weight: 600; font-size: 16px;   }
+::-moz-placeholder { color:#767676 !important;  font-size: 16px;  } /* firefox 19+ */
+:-ms-input-placeholder { color:#767676 !important;  font-size: 16px;  } /* ie */
+input:-moz-placeholder { color:#767676 !important;  font-size: 16px;  }
+
+.header .logo{
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	z-index: 2;
+}
+.header .logo span{
+	font-size: 30px;
+}
+.header .banner{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.header .form{
+	padding-top: 100px;
+}
+.header .form .bookhome{
+	background: #ffffff;
+	padding: 32px;
+}
+.header .form .bookhome .select-amount .icon-arrow-down{
+	position: absolute;
+	top: 50%;
+	right: 30px;
 }
