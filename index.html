@@ -16,14 +16,91 @@
 	<script src="js/fullcalendar.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/style.js"></script>
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-	<header id="header">
-		<div class="logo"></div>
-		<div class="banner"></div>
-		<div class="bookHome" id="bookHome"></div>
+	<header id="header" class="header position-relative">
+		<div class="logo">
+			<span class="icon-airbnb"></span>
+		</div>
+		<div class="banner">
+			<img src="images/banner.jpg" alt="airbnb" class="w-100">
+		</div>
+		<div class="form container">
+			<div class="row">
+				<div class="col-6 bookhome">
+					<form action="#" method="post">
+						<div class="row title">
+							<div class="col-12">
+								<h2 class="fs-32 font-weight-bold">Find homes in United States on Airbnb</h2>
+								<p class="sort-description fs-18">Discover entire homes and private rooms perfect for any trip.</p>
+							</div>
+						</div>
+						<div class="row form-group insert-place">
+							<div class="col-12">
+								<label for="where" class="text-uppercase fs-12 font-weight-bold letter-spacing">Where</label>
+								<input type="text" class="form-control p-11 where" id="where" placeholder="Any Where">
+							</div>
+						</div>
+						<div class="check row">
+							<div class="content w-100 d-flex">
+								<div class="col-6 check-in form-group ">
+									<label for="checkin" class="text-uppercase fs-12 font-weight-bold letter-spacing">Check In</label>
+									<input type="text" class="form-control p-11 input-lg checkin" placeholder="mm/dd/yyyy" name="checkin" id="checkin">
+								</div>
+								<div class="col-6 check-out form-group">
+									<label for="checkout" class="text-uppercase fs-12 font-weight-bold letter-spacing">Check Out</label>
+									<input type="text" class="form-control p-11 checkout" placeholder="mm/dd/yyyy" name="checkout" id="checkout">
+								</div>
+							</div>
+<!-- 							<div class="select-date w-50" id="select-date"></div>
+ -->
+						</div>
+						<div class="row select-amount">
+							<div class="col-6 amount-adults position-relative">
+								<div class="form-group">	
+									<label for="adults" class="text-uppercase fs-12 font-weight-bold letter-spacing">Adults</label>
+									<select name="adults" id="adults" class="form-control" id="adults">
+										<option value="1">1 adults</option>
+										<option value="2">2 adults</option>
+										<option value="3">3 adults</option>
+										<option value="4">4 adults</option>
+										<option value="5">5 adults</option>
+										<option value="6">6 adults</option>
+										<option value="7">7 adults</option>
+										<option value="8">8 adults</option>
+										<option value="9">9 adults</option>
+										<option value="10">10 adults</option>
+										<option value="11">11 adults</option>
+										<option value="12">12 adults</option>
+										<option value="13">13 adults</option>
+										<option value="14">14 adults</option>
+										<option value="15">15 adults</option>
+										<option value="16">16 adults</option>
+									</select>
+								</div>
+								<span class="icon-arrow-down"></span>
+							</div>
+							<div class="col-6 amount-children position-relative">
+								<div class="form-group">
+									<label for="children" class="text-uppercase fs-12 font-weight-bold letter-spacing">Children</label>
+									<select name="children" id="children" class="form-control">
+										<option value="0">0 children</option>
+										<option value="1">1 children</option>
+										<option value="2">2 children</option>
+										<option value="3">3 children</option>
+										<option value="4">4 children</option>
+										<option value="5">5 children</option>
+									</select>
+								</div>
+								<span class="icon-arrow-down"></span>
+							</div>
+						</div>
+						<button class="btn btn-block btn-danger font-weight-bold fs-16" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</header>
-	<div class="btn btn-block btn-danger" id="a">ff</div>
 </body>
 </html>
