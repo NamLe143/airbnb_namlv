@@ -4,18 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Airbnb</title>
-
+	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/airbnb-icon.css">
-	<link rel="stylesheet" href="css/fullcalendar.min.css">
-<!-- 	<link rel="stylesheet" href="css/fullcalendar.print.css"> -->	
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script src="js/moment.min.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/fullcalendar.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/style.js"></script>
+	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
@@ -23,11 +22,11 @@
 		<div class="logo">
 			<span class="icon-airbnb"></span>
 		</div>
-		<div class="banner">
-			<img src="images/banner.jpg" alt="airbnb" class="w-100">
+		<div class="banner w-100 h-100">
+			<img src="images/banner.jpg" alt="airbnb" class="w-100 h-100">
 		</div>
-		<div class="form container">
-			<div class="row">
+		<div class="form-search container">
+			<div class="row mx-0">
 				<div class="col-6 bookhome">
 					<form action="#" method="post">
 						<div class="row title">
@@ -39,11 +38,11 @@
 						<div class="row form-group insert-place">
 							<div class="col-12">
 								<label for="where" class="text-uppercase fs-12 font-weight-bold letter-spacing">Where</label>
-								<input type="text" class="form-control p-11 where" id="where" placeholder="Any Where">
+								<input type="text" class="form-control p-11 where" id="where" placeholder="Anywhere">
 							</div>
 						</div>
 						<div class="check row">
-							<div class="content w-100 d-flex">
+							<div class="content w-100 d-flex" id="form-check">
 								<div class="col-6 check-in form-group ">
 									<label for="checkin" class="text-uppercase fs-12 font-weight-bold letter-spacing">Check In</label>
 									<input type="text" class="form-control p-11 input-lg checkin" placeholder="mm/dd/yyyy" name="checkin" id="checkin">
@@ -53,14 +52,12 @@
 									<input type="text" class="form-control p-11 checkout" placeholder="mm/dd/yyyy" name="checkout" id="checkout">
 								</div>
 							</div>
-<!-- 							<div class="select-date w-50" id="select-date"></div>
- -->
 						</div>
 						<div class="row select-amount">
 							<div class="col-6 amount-adults position-relative">
 								<div class="form-group">	
 									<label for="adults" class="text-uppercase fs-12 font-weight-bold letter-spacing">Adults</label>
-									<select name="adults" id="adults" class="form-control" id="adults">
+									<select name="adults" id="adults" class="form-control form-control-lg fs-16">
 										<option value="1">1 adults</option>
 										<option value="2">2 adults</option>
 										<option value="3">3 adults</option>
@@ -84,7 +81,7 @@
 							<div class="col-6 amount-children position-relative">
 								<div class="form-group">
 									<label for="children" class="text-uppercase fs-12 font-weight-bold letter-spacing">Children</label>
-									<select name="children" id="children" class="form-control">
+									<select name="children" id="children" class="form-control form-control-lg fs-16">
 										<option value="0">0 children</option>
 										<option value="1">1 children</option>
 										<option value="2">2 children</option>
@@ -96,7 +93,7 @@
 								<span class="icon-arrow-down"></span>
 							</div>
 						</div>
-						<button class="btn btn-block btn-danger font-weight-bold fs-16" type="submit">Search</button>
+						<button class="btn btn-block btn-danger btn-lg font-weight-bold fs-16" type="submit">Search</button>
 					</form>
 				</div>
 			</div>

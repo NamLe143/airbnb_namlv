@@ -1,28 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  $('#select-date').fullCalendar({
-    themeSystem: 'bootstrap4',
-    selectable: true,
-    customButtons: {
-    myCustomButton: {
-      text: 'custom!',
-      click: function() {
-          alert('clicked the custom button!');
-        },
-      }
-    },
-    header: {
-      left: 'prev myCustomButton',
-      center: 'title',
-      right: 'next'
-    },
-    
-    dayClick: function(date) {
-      alert('clicked ' + date.format());
-    },
-    select: function(startDate, endDate) {
-      alert('selected ' + startDate.format() + ' to ' + endDate.format());
-    }
-  });
+  $('#form-check input').datepicker({
+      onChangeMonthYear: function(year, month, inst) {
 
+      }
+  });
+  $(document).on('click', '.ui-datepicker-next', function () {
+    $(".ui-datepicker-title>span").hide('slide', { direction: 'left' }, 100).show('slide', { direction: 'right' }, 100);
+    $(".ui-datepicker-calendar").hide('slide', { direction: 'left' }, 100).show('slide', { direction: 'right' }, 100);
+  })
+  
+  $(document).on('click', '.ui-datepicker-prev', function () {
+    $(".ui-datepicker-title>span").hide('slide', { direction: 'left' }, 100).show('slide', { direction: 'right' }, 100);
+    $(".ui-datepicker-calendar").hide('slide', { direction: 'right' }, 100).show('slide', { direction: 'left' }, 100);
+  })
 });

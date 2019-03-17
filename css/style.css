@@ -9,7 +9,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "din-regular";
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;  
   color: #484848;
 }
 
@@ -20,8 +20,14 @@
 .fs-24{font-size: 24px;}
 .fs-32{font-size: 32px;}
 
-.font-weight-bold{font-family: "din-bold";}
-.text-grey{color: #767676;}
+.text-grey{color: #484848;}
+.btn-danger{
+	background-color: #FF5A5F;
+	border-color: #FF5A5F;
+}
+.btn-lg{
+	height: 48px;
+}
 .letter-spacing{letter-spacing: 1;}
 .p-11{padding: 11px}
 select {
@@ -31,7 +37,7 @@ select {
 }
 /*For IE*/
 select::-ms-expand { display: none; }
-input.where::-webkit-input-placeholder { color:#484848 !important; font-weight: 600; font-size: 16px;}
+input.where::-webkit-input-placeholder { color:#484848 !important; font-weight: 6	00; font-size: 16px;}
 input.where::-moz-placeholder { color:#484848 !important;  font-size: 16px;  } /* firefox 19+ */
 input.where:-ms-input-placeholder { color:#484848 !important;  font-size: 16px;  } /* ie */
 input.where:-moz-placeholder { color:#484848 !important;  font-size: 16px;  }
@@ -41,29 +47,51 @@ input.where:-moz-placeholder { color:#484848 !important;  font-size: 16px;  }
 :-ms-input-placeholder { color:#767676 !important;  font-size: 16px;  } /* ie */
 input:-moz-placeholder { color:#767676 !important;  font-size: 16px;  }
 
+.form-control:focus{
+	border-color: #ced4da;
+	box-shadow: none;
+}
+
+.container{
+  max-width: 1080px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.header{
+  height: 690px;;
+}
 .header .logo{
 	position: absolute;
-	top: 15px;
-	left: 25px;
+	top: 16px;
+	left: 24px;
 	z-index: 2;
 }
 .header .logo span{
 	font-size: 30px;
 }
 .header .banner{
-	width: 100%;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 }
-.header .form{
-	padding-top: 100px;
+.header .banner img{
+  object-fit: cover;
 }
-.header .form .bookhome{
+.header .form-search{
+	padding-top: 64px;
+}
+.header .form-search .col-6.bookhome{
+  flex-basis: 508px;
+  min-width: 508px;;
+}
+.header .form-search .bookhome{
 	background: #ffffff;
 	padding: 32px;
 }
-.header .form .bookhome .select-amount .icon-arrow-down{
+.header .form-search .bookhome .select-amount{
+	margin-bottom: 15px;
+}
+.header .form-search .bookhome .select-amount .icon-arrow-down{
 	position: absolute;
 	top: 50%;
 	right: 30px;
